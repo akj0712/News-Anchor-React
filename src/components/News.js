@@ -31,6 +31,7 @@ export class News extends Component {
     });
     const resp = await fetch(URL);
     const respData = await resp.json();
+    // console.log(respData);
     this.setState({
       loading: false,
       articles: respData.articles,
@@ -100,6 +101,9 @@ export class News extends Component {
                     }
                     imageURL={element.urlToImage}
                     newsURL={element.url}
+                    author={element.author}
+                    date={element.publishedAt}
+                    source={element.source.name}
                   />
                 </div>
               );
