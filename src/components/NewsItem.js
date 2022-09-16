@@ -24,17 +24,21 @@ export class NewsItem extends Component {
           />
           <div className="card-body">
             <h5 className="card-title">{title} ...</h5>
-            <span className="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-danger" style={{
-              zIndex: 10,
-            }}>
+            <span
+              className="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-danger"
+              style={{
+                zIndex: 10,
+              }}
+            >
               {source}
               <span className="visually-hidden">unread messages</span>
             </span>
 
             <p className="card-text">{description} ...</p>
-            <a href={newsURL} target="_akj" className="btn btn-sm btn-dark">
+            <a href={newsURL} target="_akj" className="btn btn-sm btn-info">
               Read More...
             </a>
+
             <p className="card-text">
               <small className="text-muted">
                 By {!author ? "Unknown" : author} 3 mins on{" "}
